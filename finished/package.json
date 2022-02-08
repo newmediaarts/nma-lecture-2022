@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel serve src/index.html --open -p 8080"
+    "dev": "parcel serve src/index.html --open -p 8080",
+    "build": "parcel build src/index.htmml"
   },
   "author": "",
   "license": "ISC",
