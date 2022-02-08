@@ -1,0 +1,20 @@
+@keyframes bringToFront {
+    from {
+        z-index: 0;
+    }
+    to {
+        z-index: var(--front-index, 10);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(var(--slide-up-value, 50px));
+    }
+}
