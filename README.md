@@ -1,6 +1,6 @@
 # NMA Lecture 2022
 
-[View Demo](https://google.com)
+[View Demo](https://nma-lecture-2022.netlify.app/)
 
 ## Overview
 
