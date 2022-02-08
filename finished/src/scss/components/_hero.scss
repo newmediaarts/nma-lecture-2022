@@ -14,8 +14,16 @@
     text-align: center;
     margin: 0;
     position: relative;
-    top: 40%;
     z-index: 0;
+    animation: fadeIn 0.5s 1.3s both, bringToFront 0.4s 2.6s both;
+}
+
+.hero__title .letter {
+    position: relative;
+    display: inline-block;
+    animation: bringToFront 0.4s 2.6s both,
+        animateHeroLetter 1s calc(1.8s + var(--delay)) var(--ease-in-out-sine)
+            both;
 }
 
 .hero__image {
@@ -27,7 +35,21 @@
     display: block;
     position: relative;
     z-index: 1;
+    animation: fadeIn 0.4s 0.5s both,
+        slideUp 0.7s 0.5s var(--ease-out-sine) both;
     @include breakpoints.tablet {
         --image-height: 700px;
+    }
+}
+
+@keyframes animateHeroLetter {
+    0% {
+        transform: translateY(50%);
+    }
+    60% {
+        transform: translateY(-20%);
+    }
+    100% {
+        transform: translateY(40%);
     }
 }
