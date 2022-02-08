@@ -1,0 +1,33 @@
+@use 'breakpoints';
+@use 'grid';
+
+.hero {
+    @include grid.container;
+    grid-row-gap: 0;
+    padding-top: 80px;
+}
+
+.hero__title {
+    grid-column: 1 / -1;
+    font-size: 6vw;
+    line-height: 1;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 40%;
+    z-index: 0;
+}
+
+.hero__image {
+    --image-height: 300px;
+    grid-column: 1 / -1;
+    width: 100%;
+    height: var(--image-height);
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+    @include breakpoints.tablet {
+        --image-height: 700px;
+    }
+}

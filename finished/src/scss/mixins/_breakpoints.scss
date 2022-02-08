@@ -1,0 +1,41 @@
+$bp-phone: 375px;
+$bp-tablet: 768px;
+$bp-laptop: 1024px;
+$bp-desktop: 1440px;
+$bp-ultra-wide: 1920px;
+
+@mixin breakpoint($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @include breakpoint($bp-phone) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @include breakpoint($bp-tablet) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @include breakpoint($bp-laptop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @include breakpoint($bp-desktop) {
+        @content;
+    }
+}
+
+@mixin ultra-wide {
+    @include breakpoint($bp-ultra-wide) {
+        @content;
+    }
+}

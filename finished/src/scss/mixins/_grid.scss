@@ -1,0 +1,11 @@
+@mixin container {
+    --status: var(--grid-breakpoint-label);
+    display: grid;
+    grid-template-columns: repeat(var(--grid-column-count), 1fr);
+    grid-gap: var(--grid-column-gap);
+    max-width: var(--grid-container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--grid-outer-padding);
+    padding-right: var(--grid-outer-padding);
+}
